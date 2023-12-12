@@ -38,9 +38,13 @@ knop drukt.
 
 ![screenshot-opdracht-1.png](src/assets/screenshot-opdracht-1.png)
 
+* Wanneer de gebruiker op een knop klikt, wordt informatie over alle landen ter wereld opgehaald. Hiervoor zul je de
+  documentatie van de [REST Countries API](https://restcountries.com/#endpoints) moeten bekijken om erachter te komen
+  welk endpoint het beste past. Wanneer er resultaten
+  op de pagina worden getoond, verdwijnt de knop.
 * Bovenaan de pagina staat de afbeelding van een wereldkaart (zie de map `assets`);
-* Wanneer de gebruiker op een knok klikt, wordt informatie over alle landen ter wereld opgehaald. Wanneer er resultaten
-    op de pagina worden getoond, verdwijnt de knop.
+* Wanneer de gebruiker op een knop klikt, wordt informatie over alle landen ter wereld opgehaald. Hiervoor zul je de
+  documentatie van de API moeten bekijken om erachter te komen welk endpoint het beste past.
 * Voor ieder land geef je het volgende weer:
     1. De naam van het land
     2. De vlag van dat land
@@ -57,13 +61,15 @@ knop drukt.
 * De styling mag je zelf bepalen. Je mag het voorbeeld namaken of een eigen huisstijl bedenken!
 
 ## Opdracht 2
+
 Jouw Country Information App was een grote hit bij Constantijn. Hij moest echter wel lang scrollen en scannen naar de
 juiste informatie voor hij onschuldige voorbijgangers kon imponeren met zijn kennis. Hij heeft jou daarom gevraagd of je
 een zoek-functionaliteit kunt inbouwen zodat hij naar landen kan zoeken en zo direct allerlei informatie te zien krijgt.
 
 ![screenshot-opdracht-2.png](src/assets/screenshot-opdracht-2.png)
 
-* Je gebruikt de [REST Countries API](https://restcountries.com/#endpoints) om informatie over één specifiek land per keer op te halen;
+* Je gebruikt de [REST Countries API](https://restcountries.com/#endpoints) om informatie over één specifiek land per
+  keer op te halen;
 * Kies één land om mee te beginnen. Zorg ervoor dat de opgehaalde data op de volgende manier wordt weergegeven op de
   pagina:
 
@@ -79,8 +85,8 @@ Websites can be found on [domain] domain's
 * Er staat een zoekbalk op de pagina waarmee de gebruiker naar een land kan zoeken. De zoekopdracht wordt
   _getriggered_ zodra de gebruiker op de 'zoek'-knop klikt _of_ op ENTER drukt. De inhoud van het invoerveld wordt na
   iedere zoekopdracht geleegd;
-* Wanneer de gebruiker zoekt naar een land dat niet bestaat, wordt er een foutmelding getoond: "[ingevoerd land] bestaat
-  niet. Probeer het opnieuw". Wanneer de gebruiker daarna een nieuwe zoekopdracht maakt die wel correct is, moet de
+* Wanneer de gebruiker zoekt naar een land dat niet bestaat, wordt er een foutmelding getoond: `[ingevoerd land] bestaat
+  niet. Probeer het opnieuw`. Wanneer de gebruiker daarna een nieuwe zoekopdracht maakt die wel correct is, moet de
   foutmelding weer verdwenen zijn.
 
 ## Stappenplan
@@ -116,25 +122,25 @@ _Let op_: het is uitdagender om jouw eigen stappenplan te maken. Maar als je nie
 kun je onderstaand stappenplan gebruiken:
 
 1. Neem de documentatie van de REST Countries API goed door. Welk endpoint heb je nodig om informatie over één specifiek
-   land op te halen, zoals `nederland`? 
-2. Maak een knop die een asynchrone functie aanroept wanneer je erop klikt; 
+   land op te halen, zoals `nederland`?
+2. Maak een knop die een asynchrone functie aanroept wanneer je erop klikt;
 3. Schrijf een asynchrone functie die, met behulp van Axios, een GET-request maakt naar het juiste endpoint
-   voor `nederland`. Log de response in de console en bestudeer de data goed: hoe is het opgebouwd? 
-4. Probeer eens om de _naam_ en _hoofdstad_ van het land te loggen in de console. Welk pad moet je hiervoor volgen? 
-5. Als dat gelukt is, kun je een stukje state aanmaken om alle informatie over dit land in op te slaan; 
-6. Zorg ervoor dat de _naam_ van het land weergegeven wordt in op de pagina. 
+   voor `nederland`. Log de response in de console en bestudeer de data goed: hoe is het opgebouwd?
+4. Probeer eens om de _naam_ en _hoofdstad_ van het land te loggen in de console. Welk pad moet je hiervoor volgen?
+5. Als dat gelukt is, kun je een stukje state aanmaken om alle informatie over dit land in op te slaan;
+6. Zorg ervoor dat de _naam_ van het land weergegeven wordt in op de pagina.
 7. Zorg er nu voor dat de zin `[country-naam] is situated in [subarea-name] and the capital is [capital]`
-   daaronder wordt weergegeven; 
-8. Zorg ervoor dat er een afbeelding van een vlag naast de naam van het land komt te staan; 
-9. Schrijf een helper-functie die getallen omzet en afrond naar miljoenen; 
+   daaronder wordt weergegeven;
+8. Zorg ervoor dat er een afbeelding van een vlag naast de naam van het land komt te staan;
+9. Schrijf een helper-functie die getallen omzet en afrond naar miljoenen;
 10. Gebruik deze helperfunctie om ervoor te zorgen dat de
     zin `It has a population of [amount] million people and it borders with [amount] neighboring countries` wordt
     weergegeven op de pagina.
 11. Maak nu een inputveld met zoek-knop op de pagina. In plaats van dat de data wordt opgehaald wanneer de pagina laadt,
-    zorg je er nu voor dat de data over Nederland pas wordt opgehaald wanneer de gebruiker op ENTER of 'Zoek' drukt; 
-12. Zorg ervoor dat de waarde uit het inputveld wordt gebruikt als dynamische waarde in jouw GET-request; 
-13. Zorg ervoor dat de waarde van het input veld wordt leeggemaakt na elke successvolle zoekopdracht; 
+    zorg je er nu voor dat de data over Nederland pas wordt opgehaald wanneer de gebruiker op ENTER of 'Zoek' drukt;
+12. Zorg ervoor dat de waarde uit het inputveld wordt gebruikt als dynamische waarde in jouw GET-request;
+13. Zorg ervoor dat de waarde van het input veld wordt leeggemaakt na elke successvolle zoekopdracht;
 14. Zorg ervoor dat als er naar een land wordt gezocht dat niet bestaat, er een foutmelding in de state wordt opgeslagen
     en wordt weergegeven op de pagina: `[ingevoerd land] bestaat niet. Probeer het opnieuw` _Tip_: als er een ongeldige
-    API-call wordt gemaakt, zal de response in het catch blok terecht komen. 
+    API-call wordt gemaakt, zal de response in het catch blok terecht komen.
 15. Zorg er ook voor dat wanneer er daarna een geldig verzoek wordt gedaan, de foutmelding weer verdwenen is.
