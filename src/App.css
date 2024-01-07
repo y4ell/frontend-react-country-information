@@ -1,0 +1,29 @@
+img {
+    width: 100%
+}
+
+.countryFlag {
+    width: 20%
+}
+
+ .default {
+     color: hotpink;
+ }
+
+.blue {
+    color: cornflowerblue;
+}
+
+.green {
+    color: seagreen;
+}
+
+.yellow {
+    color: sandybrown;
+}
+.purple {
+    color: mediumpurple;
+}
+.red {
+    color: darkred;
+}
