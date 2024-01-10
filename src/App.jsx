@@ -22,7 +22,6 @@ function App() {
             setCountries(sortedCountries);
         }      catch (e) {
             console.error(e);
-            console.log('de statuscode van de fout is ' + e.response.status);
             setError('Er is iets misgegaan. Probeer het opnieuw')
         }
     }
@@ -41,13 +40,13 @@ function App() {
         }
         catch (e) {
             console.error(e);
-            console.log('de statuscode van de fout is ' + e.response.status);
             setError(`${inputCountry} bestaat niet. Probeer het opnieuw`)
         }
     }
 
     return (
         <>
+            <main>
 
              <img src={world_map} alt="Wereldkaart" className="map"/>
 
@@ -89,8 +88,7 @@ function App() {
                     Websites can be found on <code>{countryInfo.tld[0]}</code></p>
                 </article>
             }
-
-            {/*Landen met minder grote population? lukt niet daardoor miss??*/}
+            </main>
             </>
 
                 )}

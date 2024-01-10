@@ -1,6 +1,6 @@
 
-function getPopulation(populationMillions) {
-    return Math.round(populationMillions / 1000000)
+function getPopulation(number) {
+    return Math.round(number / 1000000)
 }
 
 
